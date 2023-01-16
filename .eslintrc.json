@@ -14,9 +14,17 @@
   "parserOptions": {
     "project": "./tsconfig.json"
   },
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "import"],
   "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   "rules": {
-    "@typescript-eslint/consistent-type-imports": "warn"
+    "@typescript-eslint/consistent-type-imports": "warn",
+    "import/order": [
+      "warn",
+      { "newlines-between": "always", "alphabetize": { "order": "asc" } }
+    ],
+    "sort-imports": [
+      "warn",
+      { "ignoreDeclarationSort": true, "ignoreCase": true }
+    ]
   }
 }
