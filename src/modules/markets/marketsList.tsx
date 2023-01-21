@@ -37,10 +37,10 @@ export const MarketsList = () => {
               {t("price")}
             </th>
             <th scope="col" className="px-6 py-3">
-              {t("7h")}
+              {t("24h")}
             </th>
             <th scope="col" className="px-6 py-3">
-              {t("24h")}
+              {t("7d")}
             </th>
             <th scope="col" className="px-6 py-3">
               {t("marketCap")}
@@ -72,10 +72,14 @@ export const MarketsList = () => {
                 {market.current_price}
               </td>
               <td dir="ltr" className="px-6 py-4 text-center">
-                <Percentage value={market.ath_change_percentage} />
+                <Percentage
+                  value={market.price_change_percentage_24h_in_currency}
+                />
               </td>
               <td dir="ltr" className="px-6 py-4 text-center">
-                <Percentage value={market.atl_change_percentage} />
+                <Percentage
+                  value={market.price_change_percentage_7d_in_currency}
+                />
               </td>
               <td dir="ltr" className="px-6 py-4 text-center">
                 {market.market_cap}

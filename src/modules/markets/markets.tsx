@@ -8,7 +8,11 @@ import type { MarketsQuery } from "api/category";
 
 export const Markets = () => {
   const methods = useForm<MarketsQuery>({
-    defaultValues: { page: 1, per_page: 10 },
+    defaultValues: {
+      page: 1,
+      per_page: 10,
+      price_change_percentage: ["7d", "24h"],
+    },
   });
 
   return (

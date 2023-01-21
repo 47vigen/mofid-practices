@@ -42,6 +42,8 @@ export type Market = {
   atl_date: string;
   roi?: Roi | null;
   last_updated: string;
+  price_change_percentage_7d_in_currency: number;
+  price_change_percentage_24h_in_currency: number;
 };
 
 export type Order =

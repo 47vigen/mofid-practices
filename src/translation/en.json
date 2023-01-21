@@ -22,7 +22,7 @@
       "selectCurrencyDescription": "For obtaining all the coins market data related to your selected currency"
     },
     "list": {
-      "7h": "7h",
+      "7d": "7d",
       "24h": "24h",
       "coin": "Coin",
       "price": "Price",
