@@ -9,8 +9,11 @@
 const config = {
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+    domains: ["assets.coingecko.com"],
+  },
   i18n: {
-    locales: ["en"],
+    locales: ["en", "fa"],
     defaultLocale: "en",
   },
 };

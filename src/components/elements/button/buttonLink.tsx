@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 
 import type { ButtonBaseProps } from "./buttonBase";
-import { buttonBaseClassNames } from "./buttonBase";
+import { buttonBaseClasses } from "./buttonBase";
 
 export type ButtonLinkProps = Omit<
   React.AnchorHTMLAttributes<HTMLAnchorElement>,
@@ -31,7 +31,7 @@ export const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
         ref={ref}
         className={clsx(
           rest.className,
-          buttonBaseClassNames({ color, variant, size })
+          buttonBaseClasses({ color, variant, size })
         )}
       >
         {startAdornment}

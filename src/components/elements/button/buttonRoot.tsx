@@ -2,12 +2,12 @@ import clsx from "clsx";
 import React from "react";
 
 import type { ButtonBaseProps } from "./buttonBase";
-import { buttonBaseClassNames } from "./buttonBase";
+import { buttonBaseClasses } from "./buttonBase";
 
-export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
+export type ButtonRootProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
   ButtonBaseProps;
 
-export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+export const ButtonRoot = React.forwardRef<HTMLButtonElement, ButtonRootProps>(
   (props, ref) => {
     const {
       size,
@@ -25,7 +25,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         className={clsx(
           rest.className,
-          buttonBaseClassNames({ color, variant, size })
+          buttonBaseClasses({ color, variant, size })
         )}
       >
         {startAdornment}
@@ -36,4 +36,4 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   }
 );
 
-Button.displayName = "Button";
+ButtonRoot.displayName = "Button";
